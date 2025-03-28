@@ -39,7 +39,8 @@ describe('Scenarios where authentication is a pre-condition', () => {
     cy.visit('/')
     cy.wait('@getNotes')
 
-    if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
+    if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) 
+    {
       cy.get('.navbar-toggle.collapsed')
         .should('be.visible')
         .click()
